@@ -1,6 +1,6 @@
 {
     "name": "confetticode/telegram",
-    "description": "Telegram integration",
+    "description": "Integrate multi log channels with Laravel",
     "authors": [
         {
             "name": "Quynh Nguyen",

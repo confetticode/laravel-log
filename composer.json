@@ -1,30 +1,43 @@
 {
-    "name": "confetticode/telegram",
+    "name": "confetticode/laralog",
     "description": "Integrate multi log channels with Laravel",
+    "keywords": [
+        "confetticode",
+        "laravel",
+        "telegram",
+        "log",
+        "logging"
+    ],
+    "homepage": "https://github.com/confetticode/laralog",
+    "license": "MIT",
     "authors": [
         {
             "name": "Quynh Nguyen",
-            "email": "seriquynh@gmail.com"
+            "email": "seriquynh@gmail.com",
+            "homepage": "https://seriquynh.com"
         }
     ],
     "require": {
-        "php": "^8.0",
-        "monolog/monolog": "^2.3",
+        "php" : "^8.0",
         "illuminate/log": "^8.0"
     },
     "require-dev": {
-        "symfony/var-dumper": "^5.3",
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.0"
     },
     "autoload": {
         "psr-4": {
-            "ConfettiCode\\Laralog\\": "./src"
+            "ConfettiCode\\Laralog\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\ConfettiCode\\Laralog\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "ConfettiCode\\Laralog\\TelegramServiceProvider"
+                "ConfettiCode\\Laralog\\LaralogServiceProvider"
             ]
         }
     },

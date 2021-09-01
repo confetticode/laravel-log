@@ -3,6 +3,7 @@
     "description": "Integrate multi log channels with Laravel",
     "keywords": [
         "confetticode",
+        "laralog",
         "laravel",
         "telegram",
         "log",
@@ -37,6 +38,9 @@
         }
     },
     "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        },
         "laravel": {
             "providers": [
                 "ConfettiCode\\Laralog\\LaralogServiceProvider"

@@ -40,4 +40,4 @@ jobs:
 
       - name: Execute tests
         continue-on-error: ${{ matrix.php > 8 }}
-        run: vendor/bin/ptest --verbose
+        run: vendor/bin/pest --verbose

@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\ConfettiCode\Monolog;
+namespace Tests\ConfettiCode\Channels\Telegram;
 
-use ConfettiCode\Laralog\Telegram\MessageFormatter;
+use ConfettiCode\Laralog\Channels\Telegram\MessageFormatter;
 use Monolog\DateTimeImmutable;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Logger;

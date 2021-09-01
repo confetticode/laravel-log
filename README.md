@@ -1,5 +1,7 @@
 # Integrate multi log channels with Laravel
 
+> This package is in development and not ready for production. First release will come with Laravel 9.x.
+
 ## Installation
 
 You can install the package via composer:
@@ -8,24 +10,18 @@ You can install the package via composer:
 composer require confetticode/laralog
 ```
 
-Configure channels inside `config/logging.php` file:
+Configure your expected channel variables:
 
-```php
-// After adding, logging.php looks lik this.
-return [
-    //...
-    'channels' => [
-        //...
-        'telegram' => [
-            'driver' => 'telegram',
-            'level' => 'critical',
-            'api_key' => env('TELEGRAM_API_KEY'),
-            'chat' => env('TELEGRAM_CHAT'),
-        ],
-        //...
-   ],
-    //...
-];
+```bash
+LOG_TELEGRAM_LEVEL=critical
+LOG_TELEGRAM_API_KEY=1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+LOG_TELEGRAM_CHAT_ID="@channel_or_group_id"
+```
+
+Test your configuration by running this command:
+
+```bash
+php artisan laralog --channel=telegram --message="Test sending a log message via telegram"
 ```
 
 ## Usage

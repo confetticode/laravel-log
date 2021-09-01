@@ -1,6 +1,6 @@
 <?php
 
-namespace ConfettiCode\Laralog\Telegram;
+namespace ConfettiCode\Laralog\Channels\Telegram;
 
 use Monolog\Formatter\LineFormatter;
 

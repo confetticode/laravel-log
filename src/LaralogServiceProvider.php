@@ -11,11 +11,11 @@ use Monolog\Logger;
 
 class LaralogServiceProvider extends ServiceProvider
 {
+    /**
+     * {@inheritdoc}
+     */
     public function register()
     {
-        /**
-         * {@inheritdoc}
-         */
         parent::register();
 
         $channels = (require __DIR__ . '/../config/logging.php')['channels'];

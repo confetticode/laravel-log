@@ -1,5 +1,5 @@
 {
-    "name": "confetticode/laralog",
+    "name": "confetticode/laravel-logging",
     "description": "Integrate multi log channels with Laravel",
     "keywords": [
         "confetticode",
@@ -9,7 +9,7 @@
         "log",
         "logging"
     ],
-    "homepage": "https://github.com/confetticode/laralog",
+    "homepage": "https://github.com/confetticode/laravel-logging",
     "license": "MIT",
     "authors": [
         {
@@ -25,16 +25,16 @@
         "illuminate/support": "^8.0"
     },
     "require-dev": {
-        "pestphp/pest": "^1.18"
+        "phpunit/phpunit": "^9.5"
     },
     "autoload": {
         "psr-4": {
-            "ConfettiCode\\Laralog\\": "src"
+            "ConfettiCode\\Laravel\\Logging\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\ConfettiCode\\Laralog\\": "tests"
+            "Tests\\ConfettiCode\\Laravel\\Logging\\": "tests"
         }
     },
     "extra": {
@@ -43,12 +43,15 @@
         },
         "laravel": {
             "providers": [
-                "ConfettiCode\\Laralog\\LaralogServiceProvider"
+                "ConfettiCode\\Laravel\\Logging\\LoggingServiceProvider"
             ]
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true

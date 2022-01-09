@@ -1,5 +1,5 @@
-.idea
-vendor
+.idea/
+vendor/
 test.php
 .phpunit.result.cache
 phpunit.xml

@@ -1,23 +1,21 @@
 <?php
 
-namespace ConfettiCode\Laralog;
+namespace ConfettiCode\Laravel\Logging;
 
-use ConfettiCode\Laralog\Channels\Telegram\MessageFormatter;
-use ConfettiCode\Laralog\Console\LaralogCommand;
+use ConfettiCode\Laravel\Logging\Channels\Telegram\MessageFormatter;
+use ConfettiCode\Laravel\Logging\Console\Laravel\LoggingCommand;
 use Illuminate\Log\LogManager;
 use Illuminate\Support\ServiceProvider;
 use Monolog\Handler\TelegramBotHandler;
 use Monolog\Logger;
 
-class LaralogServiceProvider extends ServiceProvider
+class LoggingServiceProvider extends ServiceProvider
 {
     /**
      * {@inheritdoc}
      */
     public function register()
     {
-        parent::register();
-
         $channels = (require __DIR__ . '/../config/logging.php')['channels'];
 
         $this->app['config']->set('logging.channels', array_merge($this->app['config']->get('logging.channels'), $channels));
@@ -28,13 +26,16 @@ class LaralogServiceProvider extends ServiceProvider
      */
     public function boot(LogManager $manager)
     {
-        $this->commands(LaralogCommand::class);
+        $this->configureTelegram($manager);
+    }
 
+    protected function configureTelegram(LogManager $manager)
+    {
         $manager->extend('telegram', function ($app, array $config) {
             $formatter = new MessageFormatter(null, $this->dateFormat, true, true);
             $formatter->includeStacktraces();
 
-            $handler = new TelegramBotHandler($config['api_key'], $config['chat_id'], $config['level'], true, $config['parse_mode'] ?? 'MarkdownV2');
+            $handler = new TelegramBotHandler($config['api_key'], $config['chat_id'], $config['level'], true, 'MarkdownV2');
             $handler->setFormatter($formatter);
 
             return new Logger($this->parseChannel($config), [$handler]);

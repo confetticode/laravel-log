@@ -7,6 +7,6 @@
 
 ## Resources
 
-- [Documentation](https://confetticode.com/docs/laralog)
-- [Contributing](https://confetticode.com/docs/laralog#contributing)
-- [License](https://confetticode.com/docs/laralog#license)
+- [Documentation](https://confetticode.com/open-source/laravel-logging)
+- [Contributing](https://confetticode.com/open-source/laravel-loggingg#contributing)
+- [License](./LICENSE.md)

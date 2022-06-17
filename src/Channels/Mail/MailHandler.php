@@ -26,7 +26,8 @@ class MailHandler extends AbstractProcessingHandler
     protected function write(array $record): void
     {
         $message = $this->formatter->format($record);
-        $this->mailer->raw($message, function (Message $message) {
+        $this->mailer->raw($message, function (Message $message) use ($record) {
+            $message->subject($record['message']);
             $message->from($this->fromAddress);
             $message->to($this->toAddress);
         });

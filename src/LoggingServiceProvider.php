@@ -3,12 +3,11 @@
 namespace ConfettiCode\Laravel\Logging;
 
 use ConfettiCode\Laravel\Logging\Channels\Mail\MailHandler;
+use ConfettiCode\Laravel\Logging\Channels\Mail\MessageFormatter as MailMessageFormatter;
 use ConfettiCode\Laravel\Logging\Channels\Telegram\MessageFormatter;
 use Illuminate\Log\LogManager;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\ServiceProvider;
-use Monolog\Formatter\LineFormatter;
-use Monolog\Handler\HandlerInterface;
 use Monolog\Handler\TelegramBotHandler;
 use Monolog\Logger;
 
@@ -50,7 +49,7 @@ class LoggingServiceProvider extends ServiceProvider
     protected function configureMailLogger(LogManager $manager)
     {
         $manager->extend('mail', function ($app, array $config) {
-            $formatter = new LineFormatter(null, $this->dateFormat, true, true);
+            $formatter = new MailMessageFormatter(null, $this->dateFormat, true, true);
             $formatter->includeStacktraces();
 
             $mailer = Mail::mailer($config['mailer']);

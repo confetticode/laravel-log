@@ -2,7 +2,7 @@
 
 namespace Tests\ConfettiCode\Laravel\Logging\Channels\Telegram;
 
-use ConfettiCode\Laravel\Logging\Channels\Telegram\MessageFormatter;
+use ConfettiCode\Laravel\Logging\Channels\Telegram\MailHandler;
 use Monolog\DateTimeImmutable;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Logger;
@@ -24,7 +24,7 @@ class MessageFormatterTest extends TestCase
 
         $lineFormatter = new LineFormatter();
 
-        $formatter = new MessageFormatter();
+        $formatter = new MailHandler();
 
         $expected = '```' . PHP_EOL . $lineFormatter->format($record) . PHP_EOL . '```';
 

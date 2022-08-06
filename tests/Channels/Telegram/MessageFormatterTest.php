@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\ConfettiCode\Laravel\Logging\Channels\Telegram;
+namespace Tests\Channels\Telegram;
 
 use ConfettiCode\Laravel\Logging\Channels\Telegram\MessageFormatter;
 use Monolog\DateTimeImmutable;

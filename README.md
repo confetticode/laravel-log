@@ -26,6 +26,11 @@ composer require confetticode/laravel-logging
 Configure your expected channel variables:
 
 ```bash
+LOG_MAILER=smtp
+LOG_MAIL_LEVEL=critical
+LOG_MAIL_FROM=noreply@example.com
+LOG_MAIL_TO=devops@example.com
+
 LOG_TELEGRAM_LEVEL=critical
 LOG_TELEGRAM_API_KEY=1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 LOG_TELEGRAM_CHAT_ID="@channel_or_group_id"
@@ -37,6 +42,22 @@ For example, you may try to send a log entry via telegram:
 
 ```php
 Log::channel('telegram')->critical('Test telegram log channel.');
+```
+
+Or update the log stack to include telegram and mail channel:
+
+```php
+<?php
+// config/logging.php
+return [
+   'channels' => [
+        'stack' => [
+            'driver' => 'stack',
+            'channels' => ['daily', 'telegram', 'mail'],
+            'ignore_exceptions' => false,
+        ],
+     ],
+];
 ```
 
 <div id="contributing"></div>

@@ -42,4 +42,4 @@ jobs:
 
       - name: Execute tests
         continue-on-error: ${{ matrix.php > 8 }}
-        run: vendor/bin/pest --verbose
+        run: composer run test

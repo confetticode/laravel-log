@@ -1,16 +1,14 @@
 {
     "name": "confetticode/laravel-logging",
     "description": "Integrate multi log channels with Laravel",
+    "license": "MIT",
     "keywords": [
         "confetticode",
-        "laralog",
         "laravel",
         "telegram",
         "log",
         "logging"
     ],
-    "homepage": "https://github.com/confetticode/laravel-logging",
-    "license": "MIT",
     "authors": [
         {
             "name": "Quynh Nguyen",
@@ -18,6 +16,7 @@
             "homepage": "https://seriquynh.com"
         }
     ],
+    "homepage": "https://github.com/confetticode/laravel-logging",
     "require": {
         "php": "^8.0",
         "illuminate/console": "^8.0",
@@ -27,6 +26,8 @@
     "require-dev": {
         "phpunit/phpunit": "^9.5"
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "ConfettiCode\\Laravel\\Logging\\": "src"
@@ -36,6 +37,12 @@
         "psr-4": {
             "Tests\\ConfettiCode\\Laravel\\Logging\\": "tests"
         }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
+        "sort-packages": true
     },
     "extra": {
         "branch-alias": {
@@ -47,12 +54,7 @@
             ]
         }
     },
-    "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "scripts": {
+        "test": "phpunit --colors=always"
+    }
 }

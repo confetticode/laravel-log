@@ -3,9 +3,9 @@
 namespace ConfettiCode\Laravel\Logging\Channels\Mail;
 
 use Illuminate\Contracts\Mail\Mailer;
-use Illuminate\Mail\Message;
 use Monolog\Handler\AbstractProcessingHandler;
-use Monolog\Logger;
+use Monolog\Level;
+use Monolog\LogRecord;
 
 class MailHandler extends AbstractProcessingHandler
 {
@@ -13,7 +13,7 @@ class MailHandler extends AbstractProcessingHandler
     protected string $fromAddress;
     protected string $toAddress;
 
-    public function __construct(Mailer $mailer, array $config = [], $level = Logger::DEBUG, bool $bubble = true)
+    public function __construct(Mailer $mailer, array $config = [], $level = Level::Debug, bool $bubble = true)
     {
         $this->mailer = $mailer;
 
@@ -23,11 +23,11 @@ class MailHandler extends AbstractProcessingHandler
         parent::__construct($level, $bubble);
     }
 
-    protected function write(array $record): void
+    protected function write(LogRecord $record): void
     {
         $message = $this->formatter->format($record);
-        $this->mailer->raw($message, function (Message $message) use ($record) {
-            $message->subject($record['message']);
+        $this->mailer->raw($message, function ($message) use ($record) {
+            $message->subject($record->message);
             $message->from($this->fromAddress);
             $message->to($this->toAddress);
         });

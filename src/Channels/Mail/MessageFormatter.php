@@ -13,8 +13,10 @@ class MessageFormatter extends LineFormatter
         $body = parent::format($record);
         // no indentation
         return <<<END
-    <h1>$title</h1>
-    <code>$body</code>
+    <div class="log">
+        <h1>$title</h1>
+        <code>$body</code>
+    </div>
 END;
     }
 }

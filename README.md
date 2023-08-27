@@ -26,12 +26,12 @@ composer require confetticode/laravel-logging
 Configure your expected channel variables:
 
 ```bash
-LOG_MAILER=smtp
-LOG_MAIL_LEVEL=critical
+LOG_MAIL_DRIVER=smtp
+LOG_MAIL_LEVEL=error
 LOG_MAIL_FROM=noreply@example.com
 LOG_MAIL_TO=devops@example.com
 
-LOG_TELEGRAM_LEVEL=critical
+LOG_TELEGRAM_LEVEL=error
 LOG_TELEGRAM_API_KEY=1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 LOG_TELEGRAM_CHAT_ID="@channel_or_group_id"
 ```

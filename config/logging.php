@@ -6,7 +6,7 @@ return [
 
         'mail' => [
             'driver' => 'mail',
-            'mailer' => env('LOG_MAILER'),
+            'mailer' => env('LOG_MAIL_DRIVER'),
             'level' => env('LOG_MAIL_LEVEL', 'critical'),
             'from' => env('LOG_MAIL_FROM'),
             'to' => env('LOG_MAIL_TO'),

@@ -19,7 +19,7 @@
     ],
     "homepage": "https://github.com/confetticode/laravel-logging",
     "require": {
-        "php": "^8.0",
+        "php": "^8.1",
         "ext-intl": "*",
         "illuminate/log": "^10.0",
         "illuminate/support": "^10.0",

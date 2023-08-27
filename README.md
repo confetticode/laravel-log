@@ -38,10 +38,14 @@ LOG_TELEGRAM_CHAT_ID="@channel_or_group_id"
 
 ## Usage
 
-For example, you may try to send a log entry via telegram:
+Send a log entry to mail or telegram: 
 
 ```php
-Log::channel('telegram')->critical('Test telegram log channel.');
+# Sending a log entry via mail.
+Log::channel('mail')->info('Test mail log channel.');
+
+# Sending a log entry via telegram.
+Log::channel('telegram')->info('Test telegram log channel.');
 ```
 
 Or update the log stack to include telegram and mail channel:

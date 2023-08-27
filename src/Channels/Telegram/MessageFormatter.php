@@ -3,13 +3,11 @@
 namespace ConfettiCode\Laravel\Logging\Channels\Telegram;
 
 use Monolog\Formatter\LineFormatter;
+use Monolog\LogRecord;
 
 class MessageFormatter extends LineFormatter
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function format(array $record): string
+    public function format(LogRecord $record): string
     {
         return '```' . PHP_EOL . parent::format($record) . PHP_EOL .'```';
     }

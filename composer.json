@@ -5,13 +5,14 @@
     "keywords": [
         "confetticode",
         "laravel",
-        "telegram",
+        "logging",
         "log",
-        "logging"
+        "mail",
+        "telegram"
     ],
     "authors": [
         {
-            "name": "Quynh Nguyen",
+            "name": "Quỳnh Nguyễn",
             "email": "seriquynh@gmail.com",
             "homepage": "https://seriquynh.com"
         }
@@ -19,17 +20,18 @@
     "homepage": "https://github.com/confetticode/laravel-logging",
     "require": {
         "php": "^8.0",
-        "illuminate/log": "^8.0 | ^9.0",
-        "illuminate/support": "^8.0 | ^9.0"
+        "illuminate/log": "^10.0",
+        "illuminate/support": "^10.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.5 | ^10.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "ConfettiCode\\Laravel\\Logging\\": "src"
+            "ConfettiCode\\Laravel\\Logging\\": "src/",
+            "Tests\\": "tests/"
         }
     },
     "config": {

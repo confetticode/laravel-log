@@ -1,12 +1,11 @@
 <?php
 
-namespace Tests\Channels\Telegram;
+namespace Tests\Channels\Mail;
 
-use ConfettiCode\Laravel\Logging\Channels\Telegram\MessageFormatter;
+use ConfettiCode\Laravel\Logging\Channels\Mail\MessageFormatter;
 use Monolog\DateTimeImmutable;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Level;
-use Monolog\Logger;
 use Monolog\LogRecord;
 use PHPUnit\Framework\TestCase;
 
@@ -18,15 +17,18 @@ class MessageFormatterTest extends TestCase
             datetime: new DateTimeImmutable(false),
             channel: 'test',
             level: Level::Info,
-            message: 'Test telegram MessageFormatter',
+            message: 'Test mail MessageFormatter',
             context: [],
             extra: []
         );
 
         $lineFormatter = new LineFormatter();
-        $expected = '```' . PHP_EOL . $lineFormatter->format($record) . PHP_EOL . '```';
 
         $formatter = new MessageFormatter();
-        $this->assertSame($expected, $formatter->format($record));
+        $mailContent = $formatter->format($record);
+        $title = $record->message;
+        $body = $lineFormatter->format($record);
+        $this->assertStringContainsString('<h1>'.$title.'</h1>', $mailContent);
+        $this->assertStringContainsString('<code>'.$body.'</code>', $mailContent);
     }
 }

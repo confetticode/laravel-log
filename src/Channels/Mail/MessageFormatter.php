@@ -3,20 +3,18 @@
 namespace ConfettiCode\Laravel\Logging\Channels\Mail;
 
 use Monolog\Formatter\LineFormatter;
+use Monolog\LogRecord;
 
 class MessageFormatter extends LineFormatter
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function format(array $record): string
+    public function format(LogRecord $record): string
     {
-        $message = parent::format($record);
-        $title = $record['message'];
+        $title = $record->message;
+        $body = parent::format($record);
         // no indentation
         return <<<END
     <h1>$title</h1>
-    <code>$message</code>
+    <code>$body</code>
 END;
     }
 }

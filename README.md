@@ -28,8 +28,8 @@ Configure your expected channel variables:
 ```bash
 LOG_MAIL_DRIVER=smtp
 LOG_MAIL_LEVEL=error
-LOG_MAIL_FROM=noreply@example.com
-LOG_MAIL_TO=devops@example.com
+LOG_MAIL_FROM=internal@confetticode.com
+LOG_MAIL_TO=devops@confetticode.com
 
 LOG_TELEGRAM_LEVEL=error
 LOG_TELEGRAM_API_KEY=1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -38,14 +38,14 @@ LOG_TELEGRAM_CHAT_ID="@channel_or_group_id"
 
 ## Usage
 
-Send a log entry to mail or telegram: 
+Send a log entry to mail or telegram:
 
 ```php
 # Sending a log entry via mail.
-Log::channel('mail')->info('Test mail log channel.');
+Log::channel('mail')->error('Test mail log channel.');
 
 # Sending a log entry via telegram.
-Log::channel('telegram')->info('Test telegram log channel.');
+Log::channel('telegram')->error('Test telegram log channel.');
 ```
 
 Or update the `config/logging.php` to push telegram and mail channels in the stack:
@@ -67,15 +67,7 @@ return [
 
 ## Contributing
 
-1. Clone the repository from GitHub.
-2. Checkout a new branch.
-3. Install composer dependencies and run tests first.
-    ```bash
-    composer install
-    composer run test
-    ```
-4. Make any changes that you need and run test again.
-5. Finally, submit your pull request.
+Thank you for considering contributing to the `ConfettiCode` project! The contribution guide can be found in the [contributing documentation](https://github.com/confetticode/.github/blob/master/CONTRIBUTING.md).
 
 <div id="license"></div>
 

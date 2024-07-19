@@ -2,7 +2,7 @@
 
 namespace Tests\Channels\Telegram;
 
-use ConfettiCode\Laravel\Logging\Channels\Telegram\MessageFormatter;
+use ConfettiCode\Laravel\Log\Channels\Telegram\MessageFormatter;
 use Monolog\DateTimeImmutable;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Level;

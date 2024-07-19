@@ -1,6 +1,6 @@
 <?php
 
-namespace ConfettiCode\Laravel\Logging\Channels\Telegram;
+namespace ConfettiCode\Laravel\Log\Channels\Telegram;
 
 use Monolog\Formatter\LineFormatter;
 use Monolog\LogRecord;

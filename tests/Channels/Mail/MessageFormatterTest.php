@@ -2,7 +2,7 @@
 
 namespace Tests\Channels\Mail;
 
-use ConfettiCode\Laravel\Logging\Channels\Mail\MessageFormatter;
+use ConfettiCode\Laravel\Log\Channels\Mail\MessageFormatter;
 use Monolog\DateTimeImmutable;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Level;

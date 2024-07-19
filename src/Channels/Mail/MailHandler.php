@@ -1,6 +1,6 @@
 <?php
 
-namespace ConfettiCode\Laravel\Logging\Channels\Mail;
+namespace ConfettiCode\Laravel\Log\Channels\Mail;
 
 use Illuminate\Contracts\Mail\Mailer;
 use Monolog\Handler\AbstractProcessingHandler;

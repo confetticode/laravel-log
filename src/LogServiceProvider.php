@@ -1,17 +1,17 @@
 <?php
 
-namespace ConfettiCode\Laravel\Logging;
+namespace ConfettiCode\Laravel\Log;
 
-use ConfettiCode\Laravel\Logging\Channels\Mail\MailHandler;
-use ConfettiCode\Laravel\Logging\Channels\Mail\MessageFormatter as MailMessageFormatter;
-use ConfettiCode\Laravel\Logging\Channels\Telegram\MessageFormatter;
+use ConfettiCode\Laravel\Log\Channels\Mail\MailHandler;
+use ConfettiCode\Laravel\Log\Channels\Mail\MessageFormatter as MailMessageFormatter;
+use ConfettiCode\Laravel\Log\Channels\Telegram\MessageFormatter;
 use Illuminate\Log\LogManager;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\ServiceProvider;
 use Monolog\Handler\TelegramBotHandler;
 use Monolog\Logger;
 
-class LoggingServiceProvider extends ServiceProvider
+class LogServiceProvider extends ServiceProvider
 {
     /**
      * {@inheritdoc}

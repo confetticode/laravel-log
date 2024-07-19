@@ -1,6 +1,6 @@
 <?php
 
-namespace ConfettiCode\Laravel\Logging\Channels\Mail;
+namespace ConfettiCode\Laravel\Log\Channels\Mail;
 
 use Monolog\Formatter\LineFormatter;
 use Monolog\LogRecord;

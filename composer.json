@@ -1,5 +1,5 @@
 {
-    "name": "confetticode/laravel-logging",
+    "name": "confetticode/laravel-log",
     "description": "Integrate multi log channels with Laravel",
     "license": "MIT",
     "keywords": [
@@ -17,24 +17,22 @@
             "homepage": "https://seriquynh.com"
         }
     ],
-    "homepage": "https://github.com/confetticode/laravel-logging",
     "require": {
         "php": "^8.1",
         "ext-intl": "*",
-        "illuminate/log": "^10.0",
-        "illuminate/support": "^10.0",
+        "illuminate/log": "^10.0 | ^11.0",
+        "illuminate/support": "^10.0 | ^11.0",
         "monolog/monolog": "^3.4",
         "tijsverkoyen/css-to-inline-styles": "^2.2"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5 | ^10.0",
-        "symfony/var-dumper": "^6.3"
+        "phpunit/phpunit": "^9.5 | ^10.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "ConfettiCode\\Laravel\\Logging\\": "src/",
+            "ConfettiCode\\Laravel\\Log\\": "src/",
             "Tests\\": "tests/"
         }
     },
@@ -50,7 +48,7 @@
         },
         "laravel": {
             "providers": [
-                "ConfettiCode\\Laravel\\Logging\\LoggingServiceProvider"
+                "ConfettiCode\\Laravel\\Log\\LogServiceProvider"
             ]
         }
     },

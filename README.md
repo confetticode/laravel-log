@@ -1,17 +1,17 @@
-<h1 style="text-align: center;">Laravel Logging</h1>
+<h1 style="text-align: center;">Laravel Log</h1>
 
 <p style="text-align: center;">
-    <a href="https://github.com/confetticode/laravel-logging/actions">
-        <img src="https://github.com/confetticode/laravel-logging/workflows/tests/badge.svg" alt="Build Status">
+    <a href="https://github.com/confetticode/laravel-log/actions">
+        <img src="https://github.com/confetticode/laravel-log/workflows/tests/badge.svg" alt="Build Status">
     </a>
-    <a href="https://packagist.org/packages/confetticode/laravel-logging">
-        <img src="https://img.shields.io/packagist/dt/confetticode/laravel-logging" alt="Total Downloads">
+    <a href="https://packagist.org/packages/confetticode/laravel-log">
+        <img src="https://img.shields.io/packagist/dt/confetticode/laravel-log" alt="Total Downloads">
     </a>
-    <a href="https://packagist.org/packages/confetticode/laravel-logging">
-        <img src="https://img.shields.io/packagist/v/confetticode/laravel-logging" alt="Latest Stable Version">
+    <a href="https://packagist.org/packages/confetticode/laravel-log">
+        <img src="https://img.shields.io/packagist/v/confetticode/laravel-log" alt="Latest Stable Version">
     </a>
-    <a href="https://packagist.org/packages/confetticode/laravel-logging">
-        <img src="https://img.shields.io/github/license/confetticode/laravel-logging" alt="License">
+    <a href="https://packagist.org/packages/confetticode/laravel-log">
+        <img src="https://img.shields.io/github/license/confetticode/laravel-log" alt="License">
     </a>
 </p>
 
@@ -20,7 +20,7 @@
 You can install the package via composer:
 
 ```bash
-composer require confetticode/laravel-logging
+composer require confetticode/laravel-log
 ```
 
 Configure your expected channel variables:
@@ -48,11 +48,10 @@ Log::channel('mail')->info('Test mail log channel.');
 Log::channel('telegram')->info('Test telegram log channel.');
 ```
 
-Or update the log stack to include telegram and mail channel:
+Or update the `config/logging.php` to push telegram and mail channels in the stack:
 
 ```php
 <?php
-// config/logging.php
 return [
    'channels' => [
         'stack' => [

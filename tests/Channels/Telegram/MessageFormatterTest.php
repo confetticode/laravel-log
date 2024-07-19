@@ -1,12 +1,22 @@
 <?php
 
+declare(strict_types=1);
+
+/*
+ * This file is part of the ConfettiCode project.
+ *
+ * (c) ConfettiCode
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Tests\Channels\Telegram;
 
-use ConfettiCode\Laravel\Logging\Channels\Telegram\MessageFormatter;
+use ConfettiCode\Laravel\Log\Channels\Telegram\MessageFormatter;
 use Monolog\DateTimeImmutable;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Level;
-use Monolog\Logger;
 use Monolog\LogRecord;
 use PHPUnit\Framework\TestCase;
 

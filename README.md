@@ -1,19 +1,8 @@
-<h1 style="text-align: center;">Laravel Log</h1>
+# Laravel Log
 
-<p style="text-align: center;">
-    <a href="https://github.com/confetticode/laravel-log/actions">
-        <img src="https://github.com/confetticode/laravel-log/workflows/tests/badge.svg" alt="Build Status">
-    </a>
-    <a href="https://packagist.org/packages/confetticode/laravel-log">
-        <img src="https://img.shields.io/packagist/dt/confetticode/laravel-log" alt="Total Downloads">
-    </a>
-    <a href="https://packagist.org/packages/confetticode/laravel-log">
-        <img src="https://img.shields.io/packagist/v/confetticode/laravel-log" alt="Latest Stable Version">
-    </a>
-    <a href="https://packagist.org/packages/confetticode/laravel-log">
-        <img src="https://img.shields.io/github/license/confetticode/laravel-log" alt="License">
-    </a>
-</p>
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/confetticode/laravel-log.svg?style=flat-square)](https://packagist.org/packages/confetticode/laravel-log)
+[![Tests](https://img.shields.io/github/actions/workflow/status/confetticode/laravel-log/tests.yml?branch=master&label=tests&style=flat-square)](https://github.com/confetticode/laravel-log/actions/workflows/tests.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/confetticode/laravel-log.svg?style=flat-square)](https://packagist.org/packages/confetticode/laravel-log)
 
 ## Installation
 
@@ -73,4 +62,4 @@ Thank you for considering contributing to the `ConfettiCode` project! The contri
 
 ## License (MIT)
 
-The MIT License (MIT). Please see [License File](./LICENSE.md) for more information.
+The MIT License (MIT). Please see the [License](./LICENSE.md) for more information.

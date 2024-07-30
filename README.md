@@ -12,7 +12,9 @@ You can install the package via composer:
 composer require confetticode/laravel-log
 ```
 
-Configure your expected channel variables:
+## Usage
+
+Configure your environment variables:
 
 ```bash
 LOG_MAIL_DRIVER=smtp
@@ -25,8 +27,6 @@ LOG_TELEGRAM_API_KEY=1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 LOG_TELEGRAM_CHAT_ID="@channel_or_group_id"
 ```
 
-## Usage
-
 Send a log entry to mail or telegram:
 
 ```php
@@ -37,7 +37,7 @@ Log::channel('mail')->error('Test mail log channel.');
 Log::channel('telegram')->error('Test telegram log channel.');
 ```
 
-Or update the `config/logging.php` to push telegram and mail channels in the stack:
+You may want to update the `config/logging.php` to push telegram and mail channels in the stack:
 
 ```php
 <?php
@@ -51,6 +51,8 @@ return [
      ],
 ];
 ```
+
+You may use `mail` and `telegram` log drivers however you want. Please read the [logging.php](./config/logging.php) to know about their configuration!
 
 <div id="contributing"></div>
 

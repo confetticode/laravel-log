@@ -54,14 +54,8 @@ return [
 
 You may use `mail` and `telegram` log drivers however you want. Please read the [logging.php](./config/logging.php) to know about their configuration!
 
-<div id="contributing"></div>
-
-## Contributing
-
-Thank you for considering contributing to the `ConfettiCode` project! The contribution guide can be found in the [contributing documentation](https://github.com/confetticode/.github/blob/master/CONTRIBUTING.md).
-
 <div id="license"></div>
 
 ## License (MIT)
 
-The MIT License (MIT). Please see the [License](./LICENSE.md) for more information.
+The `confetticode/laravel-log` package is licensed under the [MIT license](./LICENSE.md).
